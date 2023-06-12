@@ -6,7 +6,7 @@ import {updateUser} from "./UserReducer.jsx";
 function Update() {
     const {id} = useParams();
     const users = useSelector((state) => state.users);
-    const existingUser = users.userList.filter(x => x.id == id);
+    const existingUser = users.filter(x => x.id == id);
     const {name, email} = existingUser[0];
     const [existingName, setExistingName] = useState(name);
     const [existingEmail, setExistingEmail] = useState(email);
